@@ -12,9 +12,9 @@
 7. stiahnutie Primeng komponentov ```$ npm install primeng --save``` , ```$ npm install primeicons --save```
 8. spustenie projektu pomocou príkazu ```$ ng serve```
 
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-
-#Angular CLI 12.2.7
+##Angular CLI 12.2.7
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.2.7.
 
