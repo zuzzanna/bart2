@@ -1,0 +1,71 @@
+<div class="col-12 title">
+  <h1>FOTOGALÉRIA</h1>
+  <br>
+  <img src="assets/images/icons/back_icon.svg" alt="">
+  <h2 routerLink="">{{name}}</h2>
+  <hr>
+</div>
+
+<div class="col-12">
+  <div class="tz-gallery">
+      <p-galleria [value]="images" [(visible)]="displayCustom" [(activeIndex)]="activeIndex"
+                  [responsiveOptions]="responsiveOptions" [containerStyle]="{'max-width': '850px'}" [numVisible]="7"
+                  [circular]="true" [fullScreen]="true" [showItemNavigators]="true" [showThumbnails]="false" [baseZIndex]="100000">
+        <ng-template pTemplate="item" let-item>
+          <img [src]="item.previewImageSrc" style="width: 100%; display: block;"/>
+        </ng-template>
+        <ng-template pTemplate="thumbnail" let-item>
+          <div class="p-grid p-nogutter p-justify-center">
+            <img [src]="item.thumbnailImageSrc" style="display: block;"/>
+          </div>
+        </ng-template>
+      </p-galleria>
+      <div *ngIf="images" class="row categorie_gallery" >
+        <div class="col-12 col-sm-6 col-lg-4 col-xl-3 mb-4" *ngFor="let image of images; let index = index;"  key="index">
+          <img [src]="image.thumbnailImageSrc" class="gallery_image" [alt]="image.alt" style="cursor: pointer" (click)="imageClick(index)"/>
+        </div>
+        <div class="col-12 col-sm-6 col-lg-4 col-xl-3 mb-4" >
+          <div class="category add_category" (click)="displayBasic=true">
+            <div class="center">
+              <img src="assets/images/icons/Shape_6.svg" alt="...">
+              <h4>Pridať fotky</h4>
+            </div>
+          </div>
+        </div>
+      </div>
+
+  </div>
+</div>
+
+
+<p-dialog [closable]="false"  [(visible)]="displayBasic"
+          [style]="{width: '50vw'}" [styleClass]="'modal'">
+  <ng-template pTemplate="body">
+    <div class="modal-dialog" role="document">
+      <button class="close_modal" (click)="displayBasic=false" label="Ok" styleClass="p-button-text">
+        <img src="./assets/images/icons/close_icon.svg" alt="">
+        <span aria-hidden="true">Zavrieť</span>
+      </button>
+      <div class="modal-content">
+        <div class="modal-header">
+          <h3 class="modal-title" id="exampleModalLabel">Pridať fotky</h3>
+        </div>
+        <div class="modal-body">
+          <img src="./assets/images/icons/Shape_6.svg" class="modal_image" alt="move">
+          <h4>Sem presunte fotky</h4>
+          <p>alebo</p>
+          <button type="button"> Vyberte súbory</button>
+        </div>
+        <div class="modal-footer">
+          <form action="">
+            <button type="button">
+              <img src="./assets/images/icons/add_icon.svg" alt="add">
+              <span aria-hidden="true">Pridať</span>
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </ng-template>
+
+</p-dialog>
