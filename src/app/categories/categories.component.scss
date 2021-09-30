@@ -117,7 +117,7 @@ hr {
 }
 
 ::ng-deep .p-dialog {
-  top: 20%;
+  top: -0%;
   box-shadow: none;
   background: none !important;
   width: 100% !important;
@@ -126,6 +126,7 @@ hr {
 ::ng-deep .p-dialog .p-dialog-content,
 ::ng-deep .p-dialog .p-dialog-header {
   background: none !important;
+  overflow: hidden;
 }
 
 ::ng-deep .modal-dialog{

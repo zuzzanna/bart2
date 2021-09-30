@@ -11,7 +11,6 @@ const routes: Routes = [
   {path: 'jedlo', component: CategorieComponent},
   {path: 'priroda', component: CategorieComponent},
   {path: '**', component: CategoriesComponent},
-
 ];
 
 @NgModule({

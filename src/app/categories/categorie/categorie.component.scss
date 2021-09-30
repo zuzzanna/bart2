@@ -40,22 +40,6 @@ h2 {
   text-decoration: none;
 }
 
-.header {
-  background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url("../../../assets/images/images/pexels-photo-261187.jpeg") repeat scroll 70% 60%;
-  -webkit-background-size: cover !important;
-  -moz-background-size: cover !important;
-  -o-background-size: cover !important;
-  background-size: cover !important;
-  filter: blur(8px);
-  -webkit-filter: blur(8px);
-}
-
-
-.zoom:hover .category img {
-  transition: all .2s ease-in;
-  height: 110px;
-}
-
 .add_category {
   height: 100%;
   cursor: pointer;
@@ -79,7 +63,6 @@ h2 {
   width: 100%;
 }
 
-
 .p-dialog {
   top: 30% !important;
 
@@ -98,7 +81,7 @@ h2 {
 }
 
 ::ng-deep .p-dialog {
-  top: 20%;
+  top: -0%;
   box-shadow: none;
   background: none !important;
   width: 100% !important;
@@ -107,6 +90,7 @@ h2 {
 ::ng-deep .p-dialog .p-dialog-content,
 ::ng-deep .p-dialog .p-dialog-header {
   background: none !important;
+  overflow: hidden;
 }
 
 ::ng-deep .modal-dialog {
@@ -164,19 +148,6 @@ form {
   width: 100%;
 }
 
-input[type=text] {
-  padding: 12px 20px;
-  margin: 8px 0;
-  display: inline-block;
-  border: none;
-  box-sizing: border-box;
-  width: 75%;
-  color: darkgray;
-  text-transform: uppercase;
-  font-size: revert;
-  font-weight: bold;
-}
-
 form button {
   width: auto;
   background-color: #42c88d !important;
@@ -186,16 +157,6 @@ form button {
   border: none;
   border-radius: 4px;
   cursor: pointer;
-}
-
-@media(max-width: 444px) {
-  input[type=text] {
-    width: 100%;
-  }
-  form button {
-    width: 100%;
-  }
-
 }
 
 
@@ -270,5 +231,4 @@ form button {
   position: relative;
   height: 200px;
   object-fit: cover;
-
 }
