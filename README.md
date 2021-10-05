@@ -9,8 +9,9 @@
 4. stiahnutie repozitára vo formáte .zip, alebo naklonovanie cez príkaz ```$ git clone https://github.com/zuzzanna/bart2```
 5. rozbalenie repozitára v IDE (Visual Studio Code, Webstorm,...) alebo cez príkazový riadok
 6. Nahradenie súboru \src súborom z GitHubu
-7. stiahnutie Primeng komponentov ```$ npm install primeng --save``` , ```$ npm install primeicons --save```
-8. spustenie projektu pomocou príkazu ```$ ng serve```
+7. stiahnutie Bootstrap komponentov ```$ng add @ng-bootstrap/ng-bootstrap```
+8. stiahnutie Primeng komponentov ```$ npm install primeng --save``` , ```$ npm install primeicons --save```
+9. spustenie projektu pomocou príkazu ```$ ng serve```
 
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
